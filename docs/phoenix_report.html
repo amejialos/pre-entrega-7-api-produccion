@@ -1,0 +1,17 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Costo por ejecución</title>
+<style>body{font-family:system-ui,sans-serif;margin:24px;color:#1b1b1f;background:#fff}
+table{border-collapse:collapse;margin:8px 0 20px}td,th{border:1px solid #ccd;padding:6px 12px;text-align:left}
+th{background:#eef}.kpi{display:inline-block;margin:0 24px 12px 0;padding:10px 16px;border:1px solid #ccd;border-radius:8px}
+.kpi b{display:block;font-size:22px}small{color:#555}</style></head><body>
+<h2>Costo por ejecución y latencia: proyecto <code>pe7-api-agente</code> en Phoenix</h2>
+<small>Datos leídos de la API GraphQL de Phoenix (costSummary, latencyMsQuantile) el 2026-10-12T21:55:13.
+Costo = tokens de entrada/salida x precio por modelo de la tabla de Phoenix.</small>
+<p><span class="kpi">Costo promedio por ejecución<b>US$ 0.004272</b></span>
+<span class="kpi">Costo total (5 ejecuciones)<b>US$ 0.021361</b></span>
+<span class="kpi">Latencia p50<b>186.3 s</b></span>
+<span class="kpi">Latencia p95<b>286.7 s</b></span></p>
+<h3>Por ejecución (job = corrida inicial + reanudación tras la aprobación)</h3>
+<table><tr><th>job</th><th>trazas</th><th>fases</th><th>latencia (s)</th><th>tokens in / out</th><th>costo</th></tr><tr><td><code>2256c2d6</code></td><td>2</td><td>ejecutar + reanudar</td><td>186.4</td><td>6,253 / 711</td><td><b>US$ 0.003273</b></td></tr><tr><td><code>722c0eee</code></td><td>1</td><td>ejecutar</td><td>155.3</td><td>3,675 / 322</td><td><b>US$ 0.001852</b></td></tr><tr><td><code>45e67ab9</code></td><td>2</td><td>ejecutar + reanudar</td><td>235.0</td><td>9,483 / 755</td><td><b>US$ 0.004364</b></td></tr><tr><td><code>4dfe60c4</code></td><td>1</td><td>ejecutar</td><td>291.1</td><td>6,979 / 501</td><td><b>US$ 0.003176</b></td></tr><tr><td><code>8c42b114</code></td><td>1</td><td>ejecutar</td><td>276.4</td><td>22,523 / 843</td><td><b>US$ 0.008696</b></td></tr></table>
+<h3>Por nodo del grafo</h3>
+<table><tr><th>nodo</th><th>llamadas LLM</th><th>latencia total (s)</th><th>tokens in / out</th><th>costo</th></tr><tr><td>researcher</td><td>18</td><td>752.2</td><td>34,326 / 647</td><td>US$ 0.011915</td></tr><tr><td>supervisor</td><td>14</td><td>271.5</td><td>8,920 / 1,625</td><td>US$ 0.006738</td></tr><tr><td>synthesizer</td><td>5</td><td>36.5</td><td>2,532 / 598</td><td>US$ 0.001530</td></tr><tr><td>analyst</td><td>4</td><td>62.7</td><td>3,135 / 262</td><td>US$ 0.001177</td></tr></table>
+</body></html>

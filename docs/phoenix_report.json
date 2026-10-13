@@ -1,0 +1,149 @@
+{
+  "fecha": "2026-10-12T21:55:13",
+  "proyecto": "pe7-api-agente",
+  "trazas_en_proyecto": 7,
+  "costo_total_usd": 0.02136055,
+  "tokens_totales": 52045.0,
+  "latencia_ms": {
+    "p50": 186332.269,
+    "p95": 286660.881,
+    "p99": 290172.9306
+  },
+  "costo_por_job_usd": {
+    "2256c2d6666a43538c91df6d2e941cd0": 0.003273,
+    "722c0eeea5a14ae78415dcee0ae157be": 0.001852,
+    "45e67ab9a9614e92a8522fa594064f4b": 0.004364,
+    "4dfe60c477754b4886b9157479a60f65": 0.003176,
+    "8c42b114039b41999ed9493d71b21af8": 0.008696
+  },
+  "costo_promedio_por_job_usd": 0.004272,
+  "trazas": [
+    {
+      "trace_id": "0947eb8bafc299725c0661a2426439a1",
+      "nombre": "orquestador job=2256c2d6",
+      "job_id": "2256c2d6666a43538c91df6d2e941cd0",
+      "fase": "ejecutar",
+      "inicio": "2026-10-13T00:36:57.914469+00:00",
+      "latencia_s": 186.33,
+      "tokens_entrada": 6253,
+      "tokens_salida": 711,
+      "costo_usd": 0.003273
+    },
+    {
+      "trace_id": "9f52db5abad6e8b6da28df91c730ec52",
+      "nombre": "orquestador job=722c0eee",
+      "job_id": "722c0eeea5a14ae78415dcee0ae157be",
+      "fase": "ejecutar",
+      "inicio": "2026-10-13T00:36:57.919281+00:00",
+      "latencia_s": 155.31,
+      "tokens_entrada": 3675,
+      "tokens_salida": 322,
+      "costo_usd": 0.001852
+    },
+    {
+      "trace_id": "30535456d75ee1238742e9177313319f",
+      "nombre": "orquestador job=45e67ab9",
+      "job_id": "45e67ab9a9614e92a8522fa594064f4b",
+      "fase": "ejecutar",
+      "inicio": "2026-10-13T00:36:57.943498+00:00",
+      "latencia_s": 235.02,
+      "tokens_entrada": 9483,
+      "tokens_salida": 755,
+      "costo_usd": 0.004364
+    },
+    {
+      "trace_id": "b455ea69b2a9df0c3f16d41229000e36",
+      "nombre": "orquestador job=4dfe60c4",
+      "job_id": "4dfe60c477754b4886b9157479a60f65",
+      "fase": "ejecutar",
+      "inicio": "2026-10-13T00:36:57.945325+00:00",
+      "latencia_s": 291.05,
+      "tokens_entrada": 6979,
+      "tokens_salida": 501,
+      "costo_usd": 0.003176
+    },
+    {
+      "trace_id": "fdb45079ad95c3eb7adbf383173e7002",
+      "nombre": "orquestador job=8c42b114",
+      "job_id": "8c42b114039b41999ed9493d71b21af8",
+      "fase": "ejecutar",
+      "inicio": "2026-10-13T00:36:57.945496+00:00",
+      "latencia_s": 276.42,
+      "tokens_entrada": 22523,
+      "tokens_salida": 843,
+      "costo_usd": 0.008696
+    },
+    {
+      "trace_id": "ead77275cc6f4726659b257fbf8b8a09",
+      "nombre": "orquestador job=2256c2d6",
+      "job_id": "2256c2d6666a43538c91df6d2e941cd0",
+      "fase": "reanudar",
+      "inicio": "2026-10-13T00:40:07.256142+00:00",
+      "latencia_s": 0.03,
+      "tokens_entrada": 0,
+      "tokens_salida": 0,
+      "costo_usd": 0.0
+    },
+    {
+      "trace_id": "563b194de835bab4d984898a0ef864fe",
+      "nombre": "orquestador job=45e67ab9",
+      "job_id": "45e67ab9a9614e92a8522fa594064f4b",
+      "fase": "reanudar",
+      "inicio": "2026-10-13T00:40:55.225508+00:00",
+      "latencia_s": 0.02,
+      "tokens_entrada": 0,
+      "tokens_salida": 0,
+      "costo_usd": 0.0
+    }
+  ],
+  "por_nodo": {
+    "supervisor": {
+      "llamadas_llm": 14.0,
+      "tokens_entrada": 8920.0,
+      "tokens_salida": 1625.0,
+      "costo_usd": 0.006738,
+      "latencia_llm_s": 271.316483,
+      "latencia_nodo_s": 271.489336,
+      "ejecuciones": 14.0
+    },
+    "researcher": {
+      "llamadas_llm": 18.0,
+      "tokens_entrada": 34326.0,
+      "tokens_salida": 647.0,
+      "costo_usd": 0.011915,
+      "latencia_llm_s": 740.220782,
+      "latencia_nodo_s": 752.159657,
+      "ejecuciones": 6.0
+    },
+    "analyst": {
+      "llamadas_llm": 4.0,
+      "tokens_entrada": 3135.0,
+      "tokens_salida": 262.0,
+      "costo_usd": 0.001177,
+      "latencia_llm_s": 62.550591,
+      "latencia_nodo_s": 62.662023,
+      "ejecuciones": 2.0
+    },
+    "synthesizer": {
+      "llamadas_llm": 5.0,
+      "tokens_entrada": 2532.0,
+      "tokens_salida": 598.0,
+      "costo_usd": 0.00153,
+      "latencia_llm_s": 36.429344,
+      "latencia_nodo_s": 36.461381,
+      "ejecuciones": 5.0
+    },
+    "evaluar_criticidad": {
+      "latencia_nodo_s": 0.025539,
+      "ejecuciones": 5.0
+    },
+    "aprobacion_humana": {
+      "latencia_nodo_s": 0.029214,
+      "ejecuciones": 4.0
+    },
+    "publicar_reporte": {
+      "latencia_nodo_s": 0.006585,
+      "ejecuciones": 2.0
+    }
+  }
+}
