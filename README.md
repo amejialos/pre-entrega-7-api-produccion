@@ -305,7 +305,7 @@ por eso su p50 es más bajo que el del cliente.
 ## 9. Tests
 
 ```bash
-uv run pytest -q          # 60 passed, sin red ni keys
+uv run pytest -q          # 60 passed con Redis arriba; sin Redis: 59 passed + 1 skipped (sin red ni keys)
 ```
 
 | archivo | qué prueba |
