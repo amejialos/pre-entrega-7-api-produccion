@@ -15,6 +15,7 @@ Levantar:  uv run uvicorn app.main:app --port 8000
 
 import logging
 import os
+import warnings
 from collections.abc import AsyncIterator, Callable
 from contextlib import AbstractAsyncContextManager, asynccontextmanager
 from dataclasses import dataclass, field
@@ -155,6 +156,10 @@ def create_app(fabrica: FabricaRecursos = _fabrica_por_defecto) -> FastAPI:
         version="0.1.0",
         description="Pre-entrega 7: tareas asíncronas con estado en Redis, trazas en Phoenix y aprobación humana.",
         lifespan=lifespan,
+        # FastAPI trae telemetría HTTP nativa que usa el TracerProvider global (el de Phoenix).
+        # Se apaga: cada GET de polling sería una traza más en el proyecto y taparía las que
+        # importan (las corridas del grafo), además de distorsionar la latencia p95.
+        telemetry={"tracing": False, "metrics": False, "logs": False},
     )
 
     @app.post("/tasks", status_code=status.HTTP_202_ACCEPTED, response_model=TareaAceptada, tags=["tareas"])
@@ -188,5 +193,7 @@ def create_app(fabrica: FabricaRecursos = _fabrica_por_defecto) -> FastAPI:
     return app
 
 
+# Ruido conocido de langchain-openai al serializar la salida estructurada del supervisor.
+warnings.filterwarnings("ignore", message="Pydantic serializer warnings")
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
 app = create_app()
