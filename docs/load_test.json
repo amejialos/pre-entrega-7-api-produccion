@@ -1,0 +1,272 @@
+{
+  "resumen": {
+    "fecha": "2026-10-12T21:41:49",
+    "base_url": "http://localhost:8000",
+    "concurrentes": 5,
+    "duracion_total_s": 291.3,
+    "estados": {
+      "DONE": 5
+    },
+    "pasaron_por_hitl": 2,
+    "post_ms": {
+      "p50": 20.1,
+      "p95": 20.4,
+      "max": 20.5
+    },
+    "total_s": {
+      "p50": 238.4,
+      "p95": 288.5
+    },
+    "computo_s": {
+      "p50": 236.4,
+      "p95": 288.5
+    }
+  },
+  "jobs": [
+    {
+      "indice": 1,
+      "job_id": "722c0eeea5a14ae78415dcee0ae157be",
+      "pregunta": "Según la documentación de Caudal, ¿cuál es el tamaño de lote (tamano_lote) por defecto?",
+      "publicar": false,
+      "post_status": 202,
+      "post_ms": 20.2,
+      "lanzado_s": 0.0,
+      "aprobaciones": [],
+      "estados_vistos": [
+        "PENDING",
+        "RUNNING",
+        "DONE"
+      ],
+      "status": "DONE",
+      "total_s": 155.83,
+      "computo_s": 155.83,
+      "espera_humana_s": 0.0,
+      "error": null,
+      "respuesta": "El tamaño de lote (`tamano_lote`) por defecto en la librería Caudal es de 500 [caudal-instalacion › Configuración con CaudalConfig].",
+      "ruta_supervisor": [
+        "researcher",
+        "FINISH"
+      ],
+      "reporte_publicado": null,
+      "eventos": [
+        {
+          "status": "PENDING",
+          "t": "2026-10-13T00:36:57.851+00:00"
+        },
+        {
+          "status": "RUNNING",
+          "t": "2026-10-13T00:36:57.900+00:00"
+        },
+        {
+          "status": "DONE",
+          "t": "2026-10-13T00:39:33.236+00:00"
+        }
+      ]
+    },
+    {
+      "indice": 2,
+      "job_id": "8c42b114039b41999ed9493d71b21af8",
+      "pregunta": "¿Qué significa el error CAU-417 en Caudal y cómo se resuelve según la documentación?",
+      "publicar": false,
+      "post_status": 202,
+      "post_ms": 20.5,
+      "lanzado_s": 0.0,
+      "aprobaciones": [],
+      "estados_vistos": [
+        "PENDING",
+        "RUNNING",
+        "DONE"
+      ],
+      "status": "DONE",
+      "total_s": 277.24,
+      "computo_s": 277.24,
+      "espera_humana_s": 0.0,
+      "error": null,
+      "respuesta": "Respecto a su consulta sobre el error CAU-417 en Caudal, le informo lo siguiente:\n\n*   **Significado:** La documentación oficial indica que el error se refiere a \"el esquema de un\", pero el texto se encuentra incompleto en la fuente consultada [caudal-errores › Códigos de error CAU].\n*   **Resolución:** No existe información sobre la solución de este error en la documentación disponible [caudal-errores › Códigos de error CAU].\n\nDebido a que el texto en la fuente oficial está cortado, el significado completo y el procedimiento de resolución permanecen sin resolver.",
+      "ruta_supervisor": [
+        "researcher",
+        "researcher",
+        "FINISH"
+      ],
+      "reporte_publicado": null,
+      "eventos": [
+        {
+          "status": "PENDING",
+          "t": "2026-10-13T00:36:57.857+00:00"
+        },
+        {
+          "status": "RUNNING",
+          "t": "2026-10-13T00:36:57.900+00:00"
+        },
+        {
+          "status": "DONE",
+          "t": "2026-10-13T00:41:34.369+00:00"
+        }
+      ]
+    },
+    {
+      "indice": 3,
+      "job_id": "45e67ab9a9614e92a8522fa594064f4b",
+      "pregunta": "Según la documentación de Caudal, ¿qué tamaño de lote se recomienda para ingesta masiva? ¿Cuántos lotes se forman con 2.000.000 de eventos usando ese tamaño?",
+      "publicar": true,
+      "post_status": 202,
+      "post_ms": 20.1,
+      "lanzado_s": 0.0,
+      "aprobaciones": [
+        {
+          "status_code": 202,
+          "motivos": [
+            "El cliente pidió 'publicar_reporte' (publicar=true): acción con efectos secundarios."
+          ]
+        }
+      ],
+      "estados_vistos": [
+        "PENDING",
+        "RUNNING",
+        "WAITING_APPROVAL",
+        "DONE"
+      ],
+      "status": "DONE",
+      "total_s": 238.38,
+      "computo_s": 236.37,
+      "espera_humana_s": 2.01,
+      "error": null,
+      "respuesta": "Para la ingesta masiva con Caudal, se recomienda un tamaño de lote (`tamano_lote`) de **5.000 eventos o más** [fuente: `caudal-rendimiento › Backpressure y tamaño de lote`].\n\nConsiderando este tamaño de lote recomendado, el analista ha calculado la cantidad de lotes necesarios para procesar 2.000.000 de eventos de la siguiente manera:\n\n*   **Operación:** 2.000.000 / 5.000 = 400 lotes.",
+      "ruta_supervisor": [
+        "researcher",
+        "analyst",
+        "FINISH"
+      ],
+      "reporte_publicado": "pe7:reporte:45e67ab9a9614e92a8522fa594064f4b",
+      "eventos": [
+        {
+          "status": "PENDING",
+          "t": "2026-10-13T00:36:57.854+00:00"
+        },
+        {
+          "status": "RUNNING",
+          "t": "2026-10-13T00:36:57.900+00:00"
+        },
+        {
+          "status": "WAITING_APPROVAL",
+          "t": "2026-10-13T00:40:52.974+00:00"
+        },
+        {
+          "status": "PENDING",
+          "t": "2026-10-13T00:40:55.218+00:00",
+          "por": "approve"
+        },
+        {
+          "status": "RUNNING",
+          "t": "2026-10-13T00:40:55.223+00:00"
+        },
+        {
+          "status": "DONE",
+          "t": "2026-10-13T00:40:55.250+00:00"
+        }
+      ]
+    },
+    {
+      "indice": 4,
+      "job_id": "4dfe60c477754b4886b9157479a60f65",
+      "pregunta": "¿Qué conectores de origen soporta Caudal según su documentación?",
+      "publicar": false,
+      "post_status": 202,
+      "post_ms": 18.4,
+      "lanzado_s": 0.0,
+      "aprobaciones": [],
+      "estados_vistos": [
+        "PENDING",
+        "RUNNING",
+        "DONE"
+      ],
+      "status": "DONE",
+      "total_s": 291.34,
+      "computo_s": 291.34,
+      "espera_humana_s": 0.0,
+      "error": null,
+      "respuesta": "Según la documentación oficial de Caudal, los conectores de origen soportados son los siguientes:\n\n*   **`ArchivoFuente`**: Permite la lectura de líneas desde un archivo [caudal-instalacion › Primer pipeline de ejemplo].\n*   **`KafkaFuente`**: Permite el consumo de mensajes desde Apache Kafka [caudal-conectores › KafkaFuente: leer desde Apache Kafka].\n*   **`ConectorPostgres`**: Puede operar como fuente utilizando el modo `consulta` o el modo `cdc` [caudal-conectores › ConectorPostgres: fuente y sumidero de base de datos].\n\nNo se han reportado discrepancias ni datos pendientes de resolución en la documentación proporcionada.",
+      "ruta_supervisor": [
+        "researcher",
+        "FINISH"
+      ],
+      "reporte_publicado": null,
+      "eventos": [
+        {
+          "status": "PENDING",
+          "t": "2026-10-13T00:36:57.856+00:00"
+        },
+        {
+          "status": "RUNNING",
+          "t": "2026-10-13T00:36:57.900+00:00"
+        },
+        {
+          "status": "DONE",
+          "t": "2026-10-13T00:41:49.000+00:00"
+        }
+      ]
+    },
+    {
+      "indice": 5,
+      "job_id": "2256c2d6666a43538c91df6d2e941cd0",
+      "pregunta": "Buscá en la documentación de Caudal el tamano_lote por defecto, calculá cuántos lotes son 750.000 eventos y publicá el reporte para el equipo.",
+      "publicar": false,
+      "post_status": 202,
+      "post_ms": 19.5,
+      "lanzado_s": 0.001,
+      "aprobaciones": [
+        {
+          "status_code": 202,
+          "motivos": [
+            "La pregunta pide una acción hacia afuera ('publica'): se ejecutaría 'publicar_reporte'."
+          ]
+        }
+      ],
+      "estados_vistos": [
+        "PENDING",
+        "RUNNING",
+        "WAITING_APPROVAL",
+        "DONE"
+      ],
+      "status": "DONE",
+      "total_s": 190.41,
+      "computo_s": 188.38,
+      "espera_humana_s": 2.03,
+      "error": null,
+      "respuesta": "Aquí tienen el reporte solicitado para el equipo:\n\n**Reporte de Procesamiento de Eventos en Caudal**\n\n*   **Tamaño de lote por defecto:** El valor configurado por defecto es de 500 eventos [caudal-instalacion › Configuración con CaudalConfig].\n*   **Cálculo de lotes para 750.000 eventos:** Según el análisis realizado, se requieren **1.500 lotes** para procesar dicha cantidad de eventos.\n    *   **Operación del analista:** 750.000 / 500 = 1.500.\n\nNo se encontraron discrepancias en la documentación proporcionada.",
+      "ruta_supervisor": [
+        "researcher",
+        "analyst",
+        "FINISH"
+      ],
+      "reporte_publicado": "pe7:reporte:2256c2d6666a43538c91df6d2e941cd0",
+      "eventos": [
+        {
+          "status": "PENDING",
+          "t": "2026-10-13T00:36:57.859+00:00"
+        },
+        {
+          "status": "RUNNING",
+          "t": "2026-10-13T00:36:57.900+00:00"
+        },
+        {
+          "status": "WAITING_APPROVAL",
+          "t": "2026-10-13T00:40:04.264+00:00"
+        },
+        {
+          "status": "PENDING",
+          "t": "2026-10-13T00:40:07.249+00:00",
+          "por": "approve"
+        },
+        {
+          "status": "RUNNING",
+          "t": "2026-10-13T00:40:07.254+00:00"
+        },
+        {
+          "status": "DONE",
+          "t": "2026-10-13T00:40:07.291+00:00"
+        }
+      ]
+    }
+  ]
+}
